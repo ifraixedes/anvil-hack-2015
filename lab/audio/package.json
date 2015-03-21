@@ -31,7 +31,6 @@
     "run-sequence": "^1.0.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "gulp-sass": "git+ssh://git@github.com:Keats/gulp-sass.git#81e4f7dc70f9fc7488b8a65f96f448f4f9538d9d",
     "watchify": "^2.4.0"
   },
   "dependencies": {

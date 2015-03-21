@@ -66,17 +66,10 @@ gulp.task("jslint", function () {
 
 // Compile and Automatically Prefix Stylesheets
 gulp.task("styles", function () {
-  // For best performance, don"t add Sass partials to `gulp.src`
   return gulp.src([
-    "dev/styles/*.scss",
     "dev/styles/**/*.css",
     "!dev/styles/vendor/**/*"
   ])
-  .pipe(gulpPlugins.changed("styles", { extension: ".scss" }))
-  .pipe(gulpPlugins.sass({
-    precision: 10,
-    errLogToConsole: true
-  }))
   .pipe(gulpPlugins.autoprefixer({ browsers: AUTOPREFIXER_BROWSERS }))
   .pipe(gulp.dest("dist/styles"))
   .pipe(gulpPlugins.size({ title: "styles" }));
